@@ -1,1 +1,21 @@
-<p>users works!</p>
+<h2>Users</h2>
+<table class="table table-dark table-striped table-hover">
+    <thead>
+        <th scope="col">Name</th>
+        <th scope="col">Username</th>
+        <th scope="col">Address</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Website</th>
+        <th scope="col">Company</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of users">
+            <td>{{p.name}}</td>
+            <td>{{p.username}}</td>
+            <td>{{p.address.street}} {{p.address.suite}} {{p.address.city}} {{p.address.zipcode}}</td>
+            <td>{{p.phone}}</td>
+            <td>{{p.website}}</td>
+            <td>{{p.company.name}}</td>
+        </tr>
+    </tbody>
+</table>

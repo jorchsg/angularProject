@@ -9,7 +9,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class PostsComponent implements OnInit {
   //List of posts
-  private posts;
+  public posts;
 
   constructor(
     private postsService: PostsService,
@@ -21,13 +21,14 @@ export class PostsComponent implements OnInit {
     this.getPosts(); //Get all posts
   }
 
-  //Get all users
+  //Get all posts
   getPosts() {
     console.log('Getting all the posts');
     this.postsService
       .getPosts()
       .then((response) => {
         console.log(response);
+        this.posts = response;
       })
       .catch((error) => {
         console.log(error);

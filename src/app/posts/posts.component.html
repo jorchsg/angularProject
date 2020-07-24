@@ -1,1 +1,13 @@
-<p>posts works!</p>
+<h2>Posts</h2>
+<table class="table table-dark table-striped table-hover">
+    <thead>
+        <th scope="col">Title</th>
+        <th scope="col">Body</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of posts">
+            <td>{{p.title}}</td>
+            <td>{{p.body}}</td>
+        </tr>
+    </tbody>
+</table>
