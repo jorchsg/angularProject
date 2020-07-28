@@ -8,7 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { PostsComponent } from './posts/posts.component';
 import { UsersComponent } from './users/users.component';
-import { HttpClientModule } from '@angular/common/http'; //For HTTP Requests
+import { HttpClientModule } from '@angular/common/http';
+import { PostdetailComponent } from './postdetail/postdetail.component'; //For HTTP Requests
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http'; //For HTTP Requests
     HeaderComponent,
     PostsComponent,
     UsersComponent,
+    PostdetailComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule, HttpClientModule],
   providers: [],

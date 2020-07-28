@@ -15,4 +15,9 @@ export class PostsService {
   getPosts() {
     return this.httpClient.get(this.apiUrl).toPromise();
   }
+
+  //Get One Post
+  getPostDetail(id) {
+    return this.httpClient.get(this.apiUrl + '/' + id).toPromise();
+  }
 }

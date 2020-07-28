@@ -34,4 +34,9 @@ export class PostsComponent implements OnInit {
         console.log(error);
       });
   }
+  //Redirect to post detail
+  redirectPostDetail(id) {
+    console.log('redirecting to post detail....');
+    this.router.navigate([id], { relativeTo: this.activatedRoute });
+  }
 }

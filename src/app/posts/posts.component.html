@@ -3,11 +3,13 @@
     <thead>
         <th scope="col">Title</th>
         <th scope="col">Body</th>
+        <th scope="col"></th>
     </thead>
     <tbody>
         <tr *ngFor="let p of posts">
             <td>{{p.title}}</td>
             <td>{{p.body}}</td>
+            <td><button type="button" class="btn btn-info" (click)="redirectPostDetail(p.id)">Detail</button></td>
         </tr>
     </tbody>
 </table>
